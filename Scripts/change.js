@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainCover = document.querySelector(".main_cover");
     const contener = document.querySelector(".contener");
     const contener2 = document.querySelector(".contener2");
+    const chat_Box = document.querySelector('.chat_Box');
 
     function cancelTransition() {
         clearTimeout(timeout); // Stop the transition timer
@@ -10,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     mainCover.addEventListener("mouseenter", function () {
+        console.log("1");
+        if(!(chat_Box.style.display === "flex")){
+            console.log("2");
         // console.log("mouseenter event triggered");
         timeout = setTimeout(() => {
             // console.log("Starting fadeOut");
@@ -20,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 fadeIn(contener2);
             });
         }, 3000); // 3-second delay
+        }
     });
-
     // Click on contener2 to switch back to contener
     contener2.addEventListener("click", function () {
         fadeOut(contener2, () => {

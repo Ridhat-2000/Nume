@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // msgInput hide and show
     const chatBtn = document.querySelector('.chat');
     const chat_Box = document.querySelector('.chat_Box');
