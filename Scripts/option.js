@@ -17,4 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
             chat.style.backgroundImage = "url('./Resources/Photos/msg.png')";
         }
     });
+
+    const audio = document.querySelector('.audio');
+    const song = document.querySelector('.song');
+    if (!(audio instanceof HTMLAudioElement)) {
+        console.error("The selected '.audio' element is not an audio element!", audio);
+    } else {
+        song.addEventListener('click', () => {
+            if (audio.paused) {
+                console.log("audio played");
+                audio.play();
+                song.style.backgroundImage = "url('./Resources/Photos/SongOn.png')";
+            } else {
+                console.log("audio paused");
+                audio.pause();
+                song.style.backgroundImage = "url('./Resources/Photos/SongOff.png')";
+            }
+        });
+    }
+
 });

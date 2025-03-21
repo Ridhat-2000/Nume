@@ -1,3 +1,4 @@
+let gIndex = 1;
 document.addEventListener("DOMContentLoaded", function () {
     let timeout; // Store timeout reference
     const mainCover = document.querySelector(".main_cover");
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function fadeIn(element) {
         // console.log("fadeIn called");
         element.style.display = "flex"; // Make contener2 visible
+        changeAuido();
         element.style.opacity = 0;
         let opacity = 0;
         const fadeEffect = setInterval(() => {
@@ -71,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nphoto = document.querySelector('.nphoto');
         const ntext1 = document.querySelector('.ntext1');
         const ntext2 = document.querySelector('.ntext2');
+        const audio = document.querySelector('.audio');
         function changeScene(index) {
             bgvideoSource.src = infoList[index].bgvideo;
             bgvideo.load();
@@ -80,10 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         const numbers = [1, 2, 3, 11, 21, 22];
         let index = numbers[Math.floor(Math.random() * numbers.length)];
+        index = 3;
         if(index > 10 && index < 21)
             nphoto.style.right = "0";
         else
             nphoto.style.left = "0";
+        gIndex = index;
         changeScene(index);
     }
 
@@ -125,4 +130,25 @@ document.addEventListener("DOMContentLoaded", function () {
             ntext2: "It was not me, it was my heart..."
         }
     };
+
+    function changeAuido(){
+        if(!(contener2.style.display === "none")){
+            console.log("dd"+gIndex);
+            const audio = document.querySelector('.audio');
+            audio.src = audioInFo[gIndex];
+            audio.load();
+            audio.play();
+        }
+        else{
+            const audio = document.querySelector('.audio');
+            audio.src = "./Resources/Songs/Roshni.mp3";
+            audio.load();
+            audio.play();
+        }
+
+        
+    }
+    const audioInFo = {
+        3: "./Resources/Songs/Aankhon.mp3"
+    }
 });
