@@ -81,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
             ntext1.innerText = infoList[index].ntext1;
             ntext2.innerText = infoList[index].ntext2;
         }
-        const numbers = [1, 2, 3, 21];
+        const numbers = [1, 2, 3, 12, 21];
         let index = numbers[Math.floor(Math.random() * numbers.length)];
-        if(index > 10 && index < 21)
+        if(index == 11 || index == 12)
             nphoto.style.right = "0";
         else
             nphoto.style.left = "0";
@@ -119,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
         12: {
             bgvideo: "./Resources/Videos/BG1.mp4",
             nphoto: "./Resources/Photos/Nume12.png",
-            ntext1: "I am sorry for the way I acted,",
-            ntext2: "It was not me, it was my heart..."
+            ntext1: "Khub miss korche toke. Please r raag kore thakis na, onnek din holo r noi plz ---",
+            ntext2: "I can't hold myself back from talking to you, sharing our lives, and being a part of each other."
         },
         21: {
             bgvideo: "./Resources/Videos/BG2.mp4",
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         else{
             const audio = document.querySelector('.audio');
-            audio.src = "./Resources/Songs/Roshni1.mp3";
+            audio.src = "./Resources/Songs/Roshni.mp3";
             audio.load();
             audio.play();
         }
