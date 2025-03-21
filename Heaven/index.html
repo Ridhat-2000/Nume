@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBN</title>
+    <link rel="stylesheet" href="./Style/style.css">
+    <script type="module" src="./Config/register.js"></script>
+    <script type="module" src="./Scripts/msg.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js" defer></script>
+
+
+</head>
+<body>
+    <div class="contener">
+        <div class="main_cover">
+            <img src="./Resources/Photos/Nume_bw.png" class="bw_image">
+            <div class="color_overlay"></div>
+            <div class="chat_Box">
+                <div class="msg_Contener"></div>
+                <div class="type_Contener">
+                    <div class="type_Box">
+                        <div class="type">
+                            <form class="msg_Form">
+                                <input type="text" class="msg_Input" placeholder="Type here...">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="send"></div>
+                </div>
+            </div>
+        </div>
+        <div class="option">
+            <div class="chat"></div>
+            <div class="diary">
+                <div class="sd"></div>
+                <div class="rd"></div>
+            </div>
+        </div>
+        <div class="who">
+            <input type="checkbox" class="who_Check">
+        </div>
+    </div>
+    <div class="contener2">
+        <div class="bgdiv">
+            <video autoplay loop muted playsinline class="bgvideo">
+                <source src="./Resources/Videos/BG0.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="nphoto"></div>
+        <div class="ntext">
+            <div class="ntext1">
+                Sometimes I think that, if I don’t do that all was be fine, 
+            </div>
+            <div class="ntext2">
+                I am the one who need to be sorry,,, not you... 
+            </div>
+        </div> 
+    </div>
+    <script src="./Scripts/interaction.js"></script>
+    <script src="./Scripts/option.js"></script>
+    <script src="./Scripts/change.js"></script>
+</body>
+</html>
