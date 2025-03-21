@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ntext1.innerText = infoList[index].ntext1;
             ntext2.innerText = infoList[index].ntext2;
         }
-        const numbers = [1, 2, 3, 11, 12, 21, 22];
+        const numbers = [1, 2, 3];
         let index = numbers[Math.floor(Math.random() * numbers.length)];
         if(index > 10 && index < 21)
             nphoto.style.right = "0";
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         else{
             const audio = document.querySelector('.audio');
-            audio.src = "./Resources/Songs/Roshni.mp3";
+            audio.src = "./Resources/Songs/Roshni1.mp3";
             audio.load();
             audio.play();
         }
