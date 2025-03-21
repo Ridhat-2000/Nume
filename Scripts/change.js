@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ntext1.innerText = infoList[index].ntext1;
             ntext2.innerText = infoList[index].ntext2;
         }
-        const numbers = [1, 2, 3];
+        const numbers = [1, 2, 3, 21];
         let index = numbers[Math.floor(Math.random() * numbers.length)];
         if(index > 10 && index < 21)
             nphoto.style.right = "0";
@@ -125,8 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
         21: {
             bgvideo: "./Resources/Videos/BG2.mp4",
             nphoto: "./Resources/Photos/Nume21.png",
-            ntext1: "I am sorry for the way I acted,",
-            ntext2: "It was not me, it was my heart..."
+            ntext1: "I just fall in love with you every time I see you,,, Not only that,I fall in love every thing which is related to you...",
+            ntext2: " Like your story's songs are my most listened songs right now..."
         },
         22: {
             bgvideo: "./Resources/Videos/BG2.mp4",
