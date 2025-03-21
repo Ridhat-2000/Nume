@@ -81,9 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
             ntext1.innerText = infoList[index].ntext1;
             ntext2.innerText = infoList[index].ntext2;
         }
-        const numbers = [1, 2, 3, 11, 21, 22];
+        const numbers = [1, 2, 3, 11, 12, 21, 22];
         let index = numbers[Math.floor(Math.random() * numbers.length)];
-        index = 3;
         if(index > 10 && index < 21)
             nphoto.style.right = "0";
         else
@@ -96,24 +95,30 @@ document.addEventListener("DOMContentLoaded", function () {
         1: {
             bgvideo: "./Resources/Videos/BG0.mp4",
             nphoto: "./Resources/Photos/Nume1.png",
-            ntext1: "Sometimes I think that, if I don’t do that all was be fine,",
-            ntext2: "I am thdde one who need to be sorry,,, not you..."
+            ntext1: "It's not just a song—I mean it. I always think about you. Maybe that's why I never feel like we are apart,,,",
+            ntext2: "It's you who is always with me whenever I am alone, even though it's just my imagination..."
         },
         2: {
             bgvideo: "./Resources/Videos/BG0.mp4",
             nphoto: "./Resources/Photos/Nume2.png",
-            ntext1: "I am sorry for the way I acted,",
-            ntext2: "It was not me, it was my heart..."
+            ntext1: "In a saree, you look so gorgeous.Now, as I write this, I don’t know why,",
+            ntext2: " but I feel an unknown relief and happiness. I’m just smiling right now. Thank you,,,"
         },
         3: {
             bgvideo: "./Resources/Videos/BG0.mp4",
             nphoto: "./Resources/Photos/Nume3.png",
-            ntext1: "I am sorry for the way I acted,",
-            ntext2: "It was not me, it was my heart..."
+            ntext1: "I just don't know what I'm supposed to say or what I should say. You look just so cute in this photo,,,",
+            ntext2: "When I see you, it's just breathtaking. I forget to act, and I can't describe what I'm feeling then..."
         },
         11: {
             bgvideo: "./Resources/Videos/BG1.mp4",
             nphoto: "./Resources/Photos/Nume11.png",
+            ntext1: "I am sorry for the way I acted,",
+            ntext2: "It was not me, it was my heart..."
+        },
+        12: {
+            bgvideo: "./Resources/Videos/BG1.mp4",
+            nphoto: "./Resources/Photos/Nume12.png",
             ntext1: "I am sorry for the way I acted,",
             ntext2: "It was not me, it was my heart..."
         },
@@ -133,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function changeAuido(){
         if(!(contener2.style.display === "none")){
-            console.log("dd"+gIndex);
             const audio = document.querySelector('.audio');
             audio.src = audioInFo[gIndex];
             audio.load();
@@ -149,6 +153,12 @@ document.addEventListener("DOMContentLoaded", function () {
         
     }
     const audioInFo = {
-        3: "./Resources/Songs/Aankhon.mp3"
+        1:  "./Resources/Songs/Kya_kiya.mp3",
+        2:  "./Resources/Songs/Iktara.mp3",
+        3:  "./Resources/Songs/Aankhon.mp3",
+        11: "./Resources/Songs/Tu_hay.mp3",
+        12: "./Resources/Songs/Naina.mp3",
+        21: "./Resources/Songs/Jis_din.mp3",
+        22: "./Resources/Songs/Dill_tu.mp3"
     }
 });
