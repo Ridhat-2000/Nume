@@ -28,9 +28,9 @@ function sendMessage() {
 }
 
 function isJoin(){
-    const ref = ref(db, 'isJoin/' + timestamp);
+    const refe = ref(db, 'isJoin/' + timestamp);
 
-    set(ref, {
+    set(refe, {
         time: timestamp
     });
 }
