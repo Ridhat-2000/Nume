@@ -70,7 +70,6 @@ const chatRef = ref(db, 'chat');
 const chat = document.querySelector('.chat');
 // Load msg
 window.addEventListener('DOMContentLoaded', () => {
-    isJoin();
     onValue(chatRef, async (snapshot) => {
         if (snapshot.exists()) {
             for (const childSnapshot of Object.values(snapshot.val())) {
@@ -82,6 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         
     }, { onlyOnce: true });
+    isJoin();
 });
 
 // Real time Load
