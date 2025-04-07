@@ -27,6 +27,14 @@ function sendMessage() {
     }
 }
 
+function isJoin(){
+    const ref = ref(db, 'isJoin/' + timestamp);
+
+    set(ref, {
+        time: timestamp
+    });
+}
+
 function writemsg(msg, who) {
     const timestamp = getISTFormattedDate();
     console.log(timestamp);
@@ -62,6 +70,7 @@ const chatRef = ref(db, 'chat');
 const chat = document.querySelector('.chat');
 // Load msg
 window.addEventListener('DOMContentLoaded', () => {
+    isJoin();
     onValue(chatRef, async (snapshot) => {
         if (snapshot.exists()) {
             for (const childSnapshot of Object.values(snapshot.val())) {
