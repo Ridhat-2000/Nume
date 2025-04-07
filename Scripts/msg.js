@@ -27,14 +27,6 @@ function sendMessage() {
     }
 }
 
-function isJoin(){
-    const refe = ref(db, 'isJoin/' + timestamp);
-
-    set(refe, {
-        time: timestamp
-    });
-}
-
 function writemsg(msg, who) {
     const timestamp = getISTFormattedDate();
     console.log(timestamp);
@@ -43,6 +35,15 @@ function writemsg(msg, who) {
     set(reference, {
         msg: msg,
         who: who
+    });
+}
+
+function isJoin(){
+    const timestamp = getISTFormattedDate();
+    const refen = ref(db, 'isJoin/' + timestamp);
+
+    set(refen, {
+        time: timestamp
     });
 }
 
