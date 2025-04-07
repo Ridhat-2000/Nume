@@ -81,7 +81,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         
     }, { onlyOnce: true });
-    isJoin();
 });
 
 // Real time Load
@@ -126,6 +125,7 @@ async function displaymsg(msg,who)
         else
             msgDiv.style.alignSelf = "self-end";
     }
+    isJoin();
 }
 //.............................................................//
 
